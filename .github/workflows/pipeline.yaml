@@ -55,7 +55,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.TESTING_REGION }}
-          role-to-assume: ${{ env.TESTING_PIPELINE_EXECUTION_ROLE }}
+          role-to-assume: arn:aws:iam::872515270199:role/githubtest
           role-session-name: testing-packaging
           role-duration-seconds: 3600
           role-skip-session-tagging: true
@@ -88,7 +88,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.TESTING_REGION }}
-          role-to-assume: ${{ env.TESTING_PIPELINE_EXECUTION_ROLE }}
+          role-to-assume: arn:aws:iam::872515270199:role/githubtest
           role-session-name: feature-deployment
           role-duration-seconds: 3600
           role-skip-session-tagging: true
@@ -123,7 +123,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.TESTING_REGION }}
-          role-to-assume: arn:aws:iam::872515270199:role/githubtest   #  ${{ env.TESTING_PIPELINE_EXECUTION_ROLE }}
+          role-to-assume: arn:aws:iam::872515270199:role/githubtest   
           role-session-name: testing-packaging
           role-duration-seconds: 3600
           role-skip-session-tagging: true
@@ -145,7 +145,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.PROD_REGION }}
-          role-to-assume: ${{ env.PROD_PIPELINE_EXECUTION_ROLE }}
+          role-to-assume: 
           role-session-name: prod-packaging
           role-duration-seconds: 3600
           role-skip-session-tagging: true
@@ -179,7 +179,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.TESTING_REGION }}
-          role-to-assume: ${{ env.TESTING_PIPELINE_EXECUTION_ROLE }}
+          role-to-assume: arn:aws:iam::872515270199:role/githubtest
           role-session-name: testing-deployment
           role-duration-seconds: 3600
           role-skip-session-tagging: true
@@ -223,7 +223,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.PROD_REGION }}
-          role-to-assume: ${{ env.PROD_PIPELINE_EXECUTION_ROLE }}
+          role-to-assume: arn:aws:iam::872515270199:role/githubtest
           role-session-name: prod-deployment
           role-duration-seconds: 3600
           role-skip-session-tagging: true
