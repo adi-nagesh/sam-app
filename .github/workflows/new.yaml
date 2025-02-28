@@ -18,7 +18,7 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::872515270199:role/githubtest
+          role-to-assume: arn:aws:iam::872515270199:role/aws-sam-cli-managed-dev-pipel-PipelineExecutionRole-uACN94KXp3Mw
           aws-region: us-east-1
 
       - name: Verify AWS Authentication
