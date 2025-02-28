@@ -93,6 +93,9 @@ jobs:
           role-duration-seconds: 3600
           role-skip-session-tagging: true
 
+      - name: Verify AWS authentication
+        run: aws sts get-caller-identity
+
       - name: Deploy to feature stack in the testing account
         shell: bash
         run: |
@@ -124,6 +127,7 @@ jobs:
           role-session-name: testing-packaging
           role-duration-seconds: 3600
           role-skip-session-tagging: true
+
 
       - name: Upload artifacts to testing artifact buckets
         run: |
